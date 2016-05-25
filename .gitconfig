@@ -6,3 +6,5 @@
 	gl = log --all --oneline --decorate --graph
 [push]
 	default = simple
+[core]
+	excludesfile = /Users/tonykim/.gitignore_global
