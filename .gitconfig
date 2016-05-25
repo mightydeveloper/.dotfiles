@@ -2,9 +2,11 @@
 	name = Young Seok Tony Kim
 	email = 93mighty@gmail.com
 [alias]
-	lg = log --all --oneline --decorate --graph
+	lg = log --all --oneline --decorate --graph 
 	gl = log --all --oneline --decorate --graph
 [push]
 	default = simple
 [core]
 	excludesfile = /Users/tonykim/.gitignore_global
+[color]
+    ui = auto
