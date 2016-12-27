@@ -59,6 +59,13 @@ alias sl='ls'
 alias LS='ls'
 alias rm='rm -i'
 
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
