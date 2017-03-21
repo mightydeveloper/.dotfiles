@@ -59,12 +59,17 @@ alias sl='ls'
 alias LS='ls'
 alias rm='rm -i'
 
-export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
-alias ls='ls $LS_OPTIONS'
+#export LS_OPTIONS='--color=auto'
+#eval "`dircolors`"
+#alias ls='ls $LS_OPTIONS'
+
+# This configures the colors of output of ls. 
+# The directories become more visible.
+# This color works best with black background
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
