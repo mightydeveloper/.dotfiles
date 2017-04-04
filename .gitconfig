@@ -8,5 +8,6 @@
 	default = simple
 [core]
 	excludesfile = /Users/tonykim/.gitignore_global
+	editor = vim
 [color]
     ui = auto
