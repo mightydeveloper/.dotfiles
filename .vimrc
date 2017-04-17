@@ -7,6 +7,7 @@ filetype plugin on
 set nocompatible              " be iMproved, required
 
 call plug#begin()
+"Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
@@ -66,8 +67,8 @@ set encoding=utf8
 " limited window size
 nmap j gj 
 nmap k gk
-nmap <F2> :bp<CR>
-nmap <F3> :bn<CR>
+nmap <C-J> :bp<CR>
+nmap <C-K> :bn<CR>
 
 " typo mappings
 :command WQ wq
