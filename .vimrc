@@ -11,6 +11,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,13 +29,13 @@ let g:airline_theme='base16_monokai'
 " set number line
 set number
 " relative number line
-set relativenumber 
+set relativenumber
 
 " checks angle bracket pair
 set matchpairs +=<:>
 
 " Enable syntax highlighting
-syntax on 
+syntax on
 colorscheme desert
 set background=dark
 
@@ -65,7 +66,7 @@ set encoding=utf8
 " Key mappings"
 " j and k moves to the following line even if the line is just splitted by
 " limited window size
-nmap j gj 
+nmap j gj
 nmap k gk
 nmap <C-J> :bp<CR>
 nmap <C-K> :bn<CR>
@@ -75,6 +76,7 @@ nmap <C-K> :bn<CR>
 :command Wq wq
 :command W w
 :command Q q
+:command S StripWhitespace
 
 
 
