@@ -31,6 +31,9 @@ set number
 " relative number line
 set relativenumber
 
+" No more annoying indentation when paste
+set paste
+
 " checks angle bracket pair
 set matchpairs +=<:>
 
