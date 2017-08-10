@@ -59,6 +59,13 @@ alias sl='ls'
 alias LS='ls'
 alias rm='rm -i'
 
+# Tmux command aliases
+alias tn='tmux new -s'
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias takeover='tmux detach -a'
+
+
 #export LS_OPTIONS='--color=auto'
 #eval "`dircolors`"
 #alias ls='ls $LS_OPTIONS'
