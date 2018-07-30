@@ -25,14 +25,26 @@ let g:airline#extensions#ycm#enabled = 1
 let g:airline_theme='base16_monokai'
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MRU keymap
+nmap <Leader>p :CtrlPMRU<CR>
+" Exclude files an directories
+let g:ctrlp_custom_ignore = '*data/*|*/weights/*|*env/*'
+set wildignore+=*.png,*/env/*,*/data/*,*/weights/*
+" set cache directory
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " set number line
 set number
 " relative number line
 set relativenumber
+" Show command
+set showcmd
 
 " No more annoying indentation when paste
-set paste
+"set paste
 
 " checks angle bracket pair
 set matchpairs +=<:>
@@ -82,8 +94,6 @@ nmap <C-K> :bn<CR>
 :command S StripWhitespace
 
 
-
-
 " Install OmniCppComplete like described on
 " http://vim.wikia.com/wiki/C++_code_completion
 " " This offers intelligent C++ completion when typing ‘.’ ‘->’ or <C-o>
@@ -92,11 +102,3 @@ set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/sdl
 set tags+=~/.vim/tags/qt4
-
-
-
-
-
-
-
-
