@@ -66,14 +66,18 @@ alias tat='tmux attach -t'
 alias takeover='tmux detach -a'
 
 
-#export LS_OPTIONS='--color=auto'
+export LS_OPTIONS='--color=auto'
 #eval "`dircolors`"
-#alias ls='ls $LS_OPTIONS'
+alias ls='ls $LS_OPTIONS'
 
-# This configures the colors of output of ls. 
+# This configures the colors of output of ls.
 # The directories become more visible.
 # This color works best with black background
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+
+# GREP color options
+export GREP_OPTIONS='--color=always'
 
 
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
