@@ -65,10 +65,11 @@ alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias takeover='tmux detach -a'
 
-
-export LS_OPTIONS='--color=auto'
-#eval "`dircolors`"
-alias ls='ls $LS_OPTIONS'
+# Should not execute in MacOS
+if [[ "$OSTYPE" != "darwin"* ]]; then
+    export LS_OPTIONS='--color=auto'
+    alias ls='ls $LS_OPTIONS'
+fi
 
 # This configures the colors of output of ls.
 # The directories become more visible.
