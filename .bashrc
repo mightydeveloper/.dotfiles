@@ -42,6 +42,18 @@ NC="$(tput sgr0)" # No Color
 fi
 
 
+# Convenient script for playing with GPUs
+use() {
+    if [ -z $1 ]
+    then
+        echo "NVIDIA_VISIBLE_DEVICES: $NVIDIA_VISIBLE_DEVICES"
+        echo "CUDA_VISIBLE_DEVICES: $CUDA_VISIBLE_DEVICES"
+    else
+        export NVIDIA_VISIBLE_DEVICES=$1
+        export CUDA_VISIBLE_DEVICES=$1
+    fi
+}
+
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 if tty -s; then
