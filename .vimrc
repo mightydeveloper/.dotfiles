@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -23,6 +24,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 " theme
 let g:airline_theme='base16_monokai'
+" Add python3 support
+let g:pymode_python = 'python3'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -96,6 +99,9 @@ nmap <C-K> :bn<CR>
 " shorcut mappings for easy copy paste
 :command YN set number | set relativenumber
 :command NN set nonu | set norelativenumber
+
+" Black settings - apply on write.
+autocmd BufWritePre *.py execute ':Black'
 
 
 " Install OmniCppComplete like described on
